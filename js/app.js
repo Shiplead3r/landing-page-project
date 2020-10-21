@@ -19,32 +19,19 @@
 */
 const navbarElement = document.querySelector('#navbar__list');
 const sectionElements = document.querySelectorAll('section');
-//document.addEventListener('mouseover',function checkActiveSection(){});
-// for(const elemenet of sectionElements)
-// {
-//     console.log(elemenet);
-// }
 
-document.addEventListener('scroll',function(event){
-    console.log(event);
-});
+
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
+document.addEventListener('mouseover',function(event){console.log(event.target);});
+document.addEventListener('scroll',function(event){
+    console.log(event);
+});
 document.addEventListener('mouseover',checkActiveSectionPc);
-function checkActiveSectionPc(event)
-{
-for (const iterator of event.path) {
-    console.log(typeof(iterator));
-    if(iterator.toString().includes('section1') == true)
-    {
-        console.log("what");
-    }
-    //console.log(iterator);
-}
-}
+
 
 /**
  * End Helper Functions
